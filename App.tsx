@@ -11,7 +11,7 @@ import { View, Text, StyleSheet } from 'react-native';
 function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.hello}>Hello  World</Text>
+      <Text style={styles.hello}>Helloolololololoorld</Text>
     </View>
   );
 }
