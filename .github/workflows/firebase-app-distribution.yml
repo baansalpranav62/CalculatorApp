@@ -31,7 +31,7 @@ jobs:
         run: chmod +x android/gradlew
 
       - name: Build Android APK
-        run: cd android && ./gradlew assembleDebug
+        run: cd android && ./gradlew assembleRelease
 
       - name: Upload APK to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1
@@ -39,4 +39,4 @@ jobs:
           appId: ${{ secrets.FIREBASE_APP_ID }}
           serviceCredentialsFileContent: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           groups: testers # or use emails: "email1,email2"
-          file: android/app/build/outputs/apk/debug/app-debug.apk
+          file: android/app/build/outputs/apk/release/app-release.apk
